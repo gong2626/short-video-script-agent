@@ -1,0 +1,187 @@
+{
+  "brief_id": "BR3",
+  "status": "completed",
+  "title": "猫咪不爱喝水？这款304不锈钢活水饮水机温柔呵护主子健康",
+  "platform": "抖音",
+  "target_duration_sec": 30,
+  "estimated_total_duration_sec": 32.4,
+  "duration_check_passed": true,
+  "compliance_status": "PASSED",
+  "cited_doc_ids": [
+    "PRD-PET-01",
+    "FAQ-PET-02",
+    "SPEC-BRAND-03"
+  ],
+  "shots": [
+    {
+      "shot_id": 1,
+      "visual_description": "近景：猫咪嫌弃塑料碗死水走开，切换至涌泉活水吸引猫咪主动凑近畅饮",
+      "voiceover": "猫咪总嫌弃碗里死水，还容易闷出黑下巴？试试这款涌泉活水饮水机，温柔呵护饮水健康。",
+      "subtitle": "告别死水与黑下巴 · 温柔呵护饮水健康",
+      "estimated_duration_sec": 9.5,
+      "cited_doc_ids": [
+        "PRD-PET-01",
+        "SPEC-BRAND-03"
+      ]
+    },
+    {
+      "shot_id": 2,
+      "visual_description": "特写：304食品级不锈钢水盘拆洗演示，微距展示四重滤芯拦截浮毛",
+      "voiceover": "三零四食品级不锈钢水盘好洗不藏污，四重活水滤芯层层拦截浮毛与重金属。",
+      "subtitle": "304食品级不锈钢 + 四重微米级活水过滤",
+      "estimated_duration_sec": 8.5,
+      "cited_doc_ids": [
+        "PRD-PET-01"
+      ]
+    },
+    {
+      "shot_id": 3,
+      "visual_description": "中景：夜晚卧室床头猫咪喝水，分贝计显示28dB，水位灯缺水红光提醒",
+      "voiceover": "悬浮无刷水泵实测低至二十八分贝，放卧室不扰眠，更有缺水自动断电保护。",
+      "subtitle": "实测28dB轻音运行 + 缺水防干烧断电",
+      "estimated_duration_sec": 8.2,
+      "cited_doc_ids": [
+        "PRD-PET-01",
+        "FAQ-PET-02"
+      ]
+    },
+    {
+      "shot_id": 4,
+      "visual_description": "全景：2.5L透明水箱展示与人宠互动温馨结尾，左下角引导点击链接",
+      "voiceover": "两点五升大容量够喝一整周，快给自家毛孩子安排上吧！",
+      "subtitle": "2.5L大容量续航7-10天 · 点击下方同款",
+      "estimated_duration_sec": 6.2,
+      "cited_doc_ids": [
+        "PRD-PET-01",
+        "SPEC-BRAND-03"
+      ]
+    }
+  ],
+  "rejection_or_incomplete_reason": null,
+  "searched_doc_scope": [
+    "PRD-PET-01",
+    "SPEC-BRAND-03"
+  ],
+  "steps_executed": 9,
+  "tool_calls_count": 8,
+  "max_steps_limit": 10,
+  "max_tool_calls_limit": 12,
+  "execution_trace": [
+    {
+      "step": 1,
+      "action": "call_tool:search_product_docs",
+      "tool_name": "search_product_docs",
+      "tool_params": {
+        "query": "智能宠物饮水机 规格 卖点 创作规范",
+        "category_filter": ""
+      },
+      "observation_summary": "检索命中 3 篇资料：['PRD-PET-01', 'FAQ-PET-02', 'SPEC-BRAND-03']",
+      "subsequent_action": "根据检索到的文档摘要，调用 get_doc_detail 读取核心产品规格与合规边界原文",
+      "decision_rationale": "尚未获取产品事实资料，必须先检索知识库以防编造产品参数。"
+    },
+    {
+      "step": 2,
+      "action": "call_tool:get_doc_detail",
+      "tool_name": "get_doc_detail",
+      "tool_params": {
+        "doc_ids": [
+          "PRD-PET-01",
+          "SPEC-BRAND-03"
+        ]
+      },
+      "observation_summary": "已读取文档详情 ['PRD-PET-01', 'SPEC-BRAND-03']，获取核心事实条目与边界说明。",
+      "subsequent_action": "核对简报强制要求是否超出产品资料事实边界",
+      "decision_rationale": "检索命中 3 篇文档，需读取 ['PRD-PET-01', 'SPEC-BRAND-03'] 原文参数作为脚本撰写依据。"
+    },
+    {
+      "step": 3,
+      "action": "call_tool:verify_mandatory_claims_support",
+      "tool_name": "verify_mandatory_claims_support",
+      "tool_params": {
+        "required_claims": [
+          "突出 28dB 卧室级轻音运行与 2.5L 长续航缺水断电保护",
+          "必须完成时长估算与合规核查"
+        ]
+      },
+      "observation_summary": "简报所有强制卖点均在 PRD-PET-01 事实范围内，无超纲虚构要求。",
+      "subsequent_action": "若简报强制要求的卖点在核心规格书中无依据，补查 FAQ-PET-02 确认功能边界；若确认属于虚构功能则拒绝编造",
+      "decision_rationale": "简报包含具体卖点约束，需校验这些卖点是否有产品文档事实支撑。"
+    },
+    {
+      "step": 4,
+      "action": "call_tool:estimate_script_duration",
+      "tool_name": "estimate_script_duration",
+      "tool_params": {
+        "shots": "<共 4 个分镜, 草稿版本 v1>",
+        "target_duration_sec": 30,
+        "min_sec": 25,
+        "max_sec": 35
+      },
+      "observation_summary": "草稿 v1 预计总时长 48.0s （目标区间 [25, 35]s，达标=False）。当前总时长 48.0s 超出上限 35s（超出 13.0s），请删减旁白字数至 92~132 字以内并重新调用本工具复检。",
+      "subsequent_action": "观察初稿时长估算结果，并继续调用 check_script_compliance 检查广告法禁用词与事实一致性",
+      "decision_rationale": "已基于 PRD-PET-01 撰写脚本初稿（v1），需先通过时长估算工具量化检验是否在 25~35 秒区间内。"
+    },
+    {
+      "step": 5,
+      "action": "call_tool:check_script_compliance (ERROR)",
+      "tool_name": "check_script_compliance",
+      "tool_params": {
+        "title": "养猫人必看！这款100%治愈黑下巴的智能宠物饮水机太绝了",
+        "shots": "<共 4 个分镜, 草稿版本 v1>",
+        "use_local_fallback": false
+      },
+      "observation_summary": "工具执行异常：RemoteComplianceServiceTimeout: HTTP 504 Gateway Timeout when connecting to remote ad-audit endpoint. Hint: Retry check_script_compliance with use_local_fallback=True to invoke local rule engine RULE-AD-01.",
+      "subsequent_action": "捕获远程服务超时异常，下一步自动切换 use_local_fallback=True 启用本地规则引擎 RULE-AD-01 重试",
+      "decision_rationale": "对脚本 v1 执行广告法违禁词（RULE-AD-01）与产品事实防幻觉核查。"
+    },
+    {
+      "step": 6,
+      "action": "call_tool:check_script_compliance",
+      "tool_name": "check_script_compliance",
+      "tool_params": {
+        "title": "养猫人必看！这款100%治愈黑下巴的智能宠物饮水机太绝了",
+        "shots": "<共 4 个分镜, 草稿版本 v1>",
+        "use_local_fallback": true
+      },
+      "observation_summary": "草稿 v1 合规检查结果：passed=False （引擎=local_rule_engine_fallback (RULE-AD-01)，违禁词=['100%治愈', '100%治愈', '100%治愈']，虚构事实=['静音提升50%', '静音提升50%']）。",
+      "subsequent_action": "若合规或时长存在任一未通过项，动态修改脚本并进入下一轮复检；若双重校验均通过则输出最终脚本",
+      "decision_rationale": "远程合规接口超时后，动态切换 use_local_fallback=True 调用本地规则引擎 RULE-AD-01 对 v1 执行降级合规审查。"
+    },
+    {
+      "step": 7,
+      "action": "call_tool:estimate_script_duration",
+      "tool_name": "estimate_script_duration",
+      "tool_params": {
+        "shots": "<共 4 个分镜, 草稿版本 v2>",
+        "target_duration_sec": 30,
+        "min_sec": 25,
+        "max_sec": 35
+      },
+      "observation_summary": "草稿 v2 预计总时长 32.4s （目标区间 [25, 35]s，达标=True）。时长合格，无需调整。",
+      "subsequent_action": "观察修订稿 v2 的时长复检结果，随后继续调用 check_script_compliance 完成合规复检",
+      "decision_rationale": "初稿 v1 检验未通过：预计时长 48.0s 超出 [25,35]s 区间，且检出违禁词 ['100%治愈', '100%治愈', '100%治愈'] 与无依据参数 ['静音提升50%', '静音提升50%']。已精简台词至 108 字、替换违禁词并改用 PRD-PET-01 实测“28dB”参数生成修订稿 v2，立即发起二次时长复检。"
+    },
+    {
+      "step": 8,
+      "action": "call_tool:check_script_compliance",
+      "tool_name": "check_script_compliance",
+      "tool_params": {
+        "title": "猫咪不爱喝水？这款304不锈钢活水饮水机温柔呵护主子健康",
+        "shots": "<共 4 个分镜, 草稿版本 v2>",
+        "use_local_fallback": true
+      },
+      "observation_summary": "草稿 v2 合规检查结果：passed=True （引擎=local_rule_engine_fallback (RULE-AD-01)，违禁词=[]，虚构事实=[]）。",
+      "subsequent_action": "若合规或时长存在任一未通过项，动态修改脚本并进入下一轮复检；若双重校验均通过则输出最终脚本",
+      "decision_rationale": "远程合规接口超时后，动态切换 use_local_fallback=True 调用本地规则引擎 RULE-AD-01 对 v2 执行降级合规审查。"
+    },
+    {
+      "step": 9,
+      "action": "finish_deliverable",
+      "tool_name": null,
+      "tool_params": {},
+      "observation_summary": "最终脚本 v2 双重复检通过（总时长 32.4s，合规 PASSED）。",
+      "subsequent_action": "输出结构化短视频分镜脚本并结束任务",
+      "decision_rationale": "修订稿 v2 经工具复检确认总时长为 32.4s（满足 25~35s），且合规与事实核查全部 PASSED，达到交付标准。"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "rule_doc_id": "RULE-AD-01",
+  "version": "2026-Q4",
+  "speech_rate_chars_per_sec": 4.0,
+  "shot_transition_buffer_sec": 0.5,
+  "default_tolerance_ratio": 0.167,
+  "banned_words": [
+    {"word": "100%治愈", "category": "医疗与绝对化违禁词", "replacement": "贴心守护 / 温柔呵护"},
+    {"word": "100%根治", "category": "医疗与绝对化违禁词", "replacement": "帮助改善"},
+    {"word": "彻底告别疾病", "category": "医疗功效宣称", "replacement": "养成爱喝水好习惯"},
+    {"word": "全网第一", "category": "极限词", "replacement": "高人气口碑"},
+    {"word": "国家级", "category": "极限词", "replacement": "严选品质"},
+    {"word": "最静音", "category": "极限词", "replacement": "28dB轻音运行"},
+    {"word": "零噪音", "category": "虚假绝对化宣称", "replacement": "低至28dB轻音"},
+    {"word": "永不坏", "category": "虚假承诺", "replacement": "防干烧耐用设计"}
+  ],
+  "hallucination_patterns": [
+    {"pattern": "静音提升50%", "reason": "资料库 PRD-PET-01 / FAQ-PET-02 明确声明无此对比数据，属于编造产品事实"},
+    {"pattern": "静音提升 50%", "reason": "资料库 PRD-PET-01 / FAQ-PET-02 明确声明无此对比数据，属于编造产品事实"},
+    {"pattern": "UV杀菌", "reason": "FAQ-PET-02 明确说明产品未内置 UV 紫外线杀菌功能"},
+    {"pattern": "紫外线杀菌", "reason": "FAQ-PET-02 明确说明产品未内置 UV 紫外线杀菌功能"},
+    {"pattern": "恒温加热", "reason": "FAQ-PET-02 明确说明产品不支持恒温加热功能"},
+    {"pattern": "饮水量翻倍", "reason": "缺乏实验数据支撑的量化夸大宣称"}
+  ]
+}
